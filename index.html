@@ -1,14 +1,33 @@
 <!doctype html>
 <html>
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
     <title>Progress navigation</title>
 </head>
 <body>
-    <!--
-        Create Tabs component, that has several tab buttons. Each button toggles active tab content.
-        Add a text input with a button. User can enter any tab index in the input and toggle it by clicking the button.
-        Indexes in this task are not the same as they are used in JS, so by entering 1 - first tab should be shown, not 0.
-        If invalid index is entered - browser must show an alert.
-    -->
+    <div class="container">
+        <div class="input">
+            <input type="number" placeholder="Enter tab index">
+            <button type="button" class="btn btn-default">Change Tab</button>
+        </div>
+        <ul class="nav nav-tabs">
+            <li class="nav-item"><a href="#" class="nav-link">POSITIVE</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">NEGATIVE</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">NEUTRAL</a></li>           
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="positive">
+                <p>Positive content</p>
+            </div>
+            <div class="tab-pane" id="negative">
+                <p>Negative content</p>
+            </div>
+            <div class="tab-pane" id="neutral">
+                <p>Neutral content</p>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>

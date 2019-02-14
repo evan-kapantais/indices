@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    background-color: cornflowerblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 2;
+}
+
+.container {
+    background-color: white;
+    width: 60%;
+    position: relative;
+    margin: 200px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input {
+    width: 70%;
+    padding: 0 20px;
+    border: 0;
+    border-bottom: 1px solid lightgrey;
+    margin-right: 15px;
+}
+
+.btn-default {
+    background-color:whitesmoke;
+}
+
+
+
