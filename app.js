@@ -8,7 +8,11 @@ document.getElementById('button').addEventListener('click', switchTab);
 
 
 function resetTabs() {
-    document.getElementsByClassName('nav-link').classList.remove('active');
+    var tabsList = document.getElementsByClassName('nav-link');
+
+    tabsList.forEach(function(item){
+        item.classList.remove('active');
+    });
 }
 
 function switchTab() {
