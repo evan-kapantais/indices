@@ -3,7 +3,6 @@ document.getElementById('button').addEventListener('click', handleInput);
 var tabsContent = document.getElementsByClassName('tab-pane');
 var navLinks = document.getElementsByClassName('nav-link');
 
-
 function validateInput() {
     var input = document.getElementById('input').value;
 
@@ -14,12 +13,12 @@ function validateInput() {
     return;
 }
 
-
 function handleInput() {
 
     validateInput();
 
     var input = document.getElementById('input').value;
+
     for (var i = 0; i < tabsContent.length; ++i) {
         tabsContent[i].classList.remove('active');
         tabsContent[i].classList.remove('show');
