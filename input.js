@@ -1,24 +1,32 @@
 document.getElementById('button').addEventListener('click', handleInput);
+
 var tabsContent = document.getElementsByClassName('tab-pane');
 var navLinks = document.getElementsByClassName('nav-link');
 
-function resetActiveStatus() {
-    tabsContent.forEach(function(item){
-        item.classList.remove('active');
-    });
-    navLinks.forEach(function(item){
-        item.classList.remove('active');
-    });
+
+function validateInput() {
+    var input = document.getElementById('input').value;
+
+    if (input < 1 || input > 3) {
+        alert("Please enter a value between 1 and 3.");
+        document.getElementById('input').value = "";
+    }
+    return;
 }
 
+
 function handleInput() {
-    var value = document.getElementById('input').value;
-    
-    if (value > 3 || value < 1) {
-        alert('Please enter a value from 1 to 3.');
+
+    validateInput();
+
+    var input = document.getElementById('input').value;
+    for (var i = 0; i < tabsContent.length; ++i) {
+        tabsContent[i].classList.remove('active');
+        tabsContent[i].classList.remove('show');
+        navLinks[i].classList.remove('active');
     }
 
-    resetActiveStatus();
-
-    navLinks[value - 1].classList.add('active');
+    navLinks[input-1].classList.add('active');
+    tabsContent[input-1].classList.add('show');
+    tabsContent[input-1].classList.add('active');
 }
